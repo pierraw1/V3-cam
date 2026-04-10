@@ -1,0 +1,61 @@
+---
+// CTA.astro
+---
+
+<section class="bg-primary w-full py-16 md:py-32 px-6 md:px-12 text-white">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Version Mobile -->
+        <div class="md:hidden flex flex-col items-start gap-10">
+            <h2 class="text-4xl font-heading tracking-wide">
+                Pour plus d'infos
+            </h2>
+            <div class="flex flex-col gap-6 w-full px-2">
+                <a href="/mon-parcours" class="block w-full border-[1.5px] border-white py-5 text-center hover:bg-white/10 transition-colors">
+                    <span class="font-heading text-2xl tracking-wide text-white drop-shadow-sm">Mes expériences</span>
+                </a>
+                <a href="/projets" class="block w-full border-[1.5px] border-white py-5 text-center hover:bg-white/10 transition-colors">
+                    <span class="font-heading text-2xl tracking-wide text-white drop-shadow-sm">Mes Projets</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Version PC -->
+        <div class="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-12 lg:gap-24">
+            
+            <!-- Bloc Gauche : Mes expériences -->
+            <div class="flex flex-col items-center gap-12">
+                <img 
+                    src="/images/livre.jpeg" 
+                    alt="Image illustrant les expériences" 
+                    class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full shadow-xl grayscale-[20%]" 
+                />
+                <a href="/mon-parcours" class="border-[1.5px] border-white py-4 px-12 hover:bg-white/10 transition-colors">
+                    <span class="font-heading text-[2rem] tracking-wide text-white drop-shadow-sm">Mes expériences</span>
+                </a>
+            </div>
+
+            <!-- Séparateur Central SVG -->
+            <div class="h-full flex items-center justify-center">
+                <!-- La hauteur est ajustée pour dépasser un peu la zone des cercles -->
+                <svg class="h-[400px] lg:h-[450px] text-white opacity-80" width="2" viewBox="0 0 2 100" preserveAspectRatio="none">
+                    <line x1="1" y1="0" x2="1" y2="100" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </div>
+
+            <!-- Bloc Droite : Mes Projets -->
+            <div class="flex flex-col items-center gap-12">
+                <img 
+                    src="/images/photo-cv.png" 
+                    alt="Image illustrant les projets" 
+                    class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full shadow-xl" 
+                />
+                <a href="/projets" class="border-[1.5px] border-white py-4 px-12 hover:bg-white/10 transition-colors">
+                    <span class="font-heading text-[2rem] tracking-wide text-white drop-shadow-sm">Mes Projets</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,45 @@
+{
+  "_template": "parcours",
+  "pageTitle": "Mon Parcours",
+  "pageSubtitle": "Découvrez mes expériences professionnelles formatrices et mon cursus académique, façonnant ma vision de la communication aujourd'hui.",
+  "experiences": [
+    {
+      "title": "Chargée de Communication (Alternance)",
+      "company": "Agence Créative XYZ",
+      "date": "Sept. 2023 - Présent",
+      "description": "Gestion complète de la stratégie digitale pour plusieurs clients dans le secteur mode et lifestyle. Accompagnement de A à Z sur la conception créative.",
+      "missions": [
+        "Animation des réseaux sociaux (Instagram, TikTok, LinkedIn)",
+        "Création de visuels vectoriels et montage de vidéos courtes",
+        "Suivi, analyse des statistiques (KPIs) et reporting mensuel"
+      ]
+    },
+    {
+      "title": "Stage Assistant.e Chef de Projet",
+      "company": "Startup Locale Ouest",
+      "date": "Avril 2023 - Juillet 2023",
+      "description": "Assistance globale dans la planification de divers événements promotionnels et refonte de l'identité de marque.",
+      "missions": [
+        "Veille concurrentielle et réalisation de benchmarks approfondis",
+        "Création de supports de communication print et web",
+        "Participation active à l'organisation d'un salon professionnel"
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "title": "BUT MMI (Métiers du Multimédia et de l'Internet)",
+      "school": "IUT",
+      "location": "France",
+      "date": "2022 - 2025",
+      "description": "Spécialité Stratégie de Communication et Design Numérique. Apprentissage hybride mêlant créativité, développement web et stratégie marketing."
+    },
+    {
+      "title": "Baccalauréat Général",
+      "school": "Lycée",
+      "location": "France",
+      "date": "2020 - 2022",
+      "description": "Spécialités pertinentes (Arts Plastiques, etc.) avec mention."
+    }
+  ]
+}

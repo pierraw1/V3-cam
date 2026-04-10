@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTA from '../../components/CTA.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+// Récupération des projets depuis la collection locale (TinaCMS)
+const projects = await getCollection('projets');
+
+// Gère les catégories uniques
+const categories = [...new Set(projects.map((p: CollectionEntry<'projets'>) => p.data.category))];
+---
+
+<Layout title="Mes Projets | Portfolio">
+    <div class="bg-[#FFFBF8] min-h-[80vh] w-full pt-20 pb-40">
+        <section class="max-w-[1400px] mx-auto px-6 md:px-12">
+            
+            <!-- Header : Titre + Filtres -->
+            <div class="flex flex-col gap-10 mb-20">
+                <h1 class="text-5xl md:text-[5rem] font-heading text-accent tracking-wide">
+                    Mes Projets
+                </h1>
+                
+                <!-- Barre de filtres responsive -->
+                <div class="bg-primary shadow-lg self-start flex flex-col md:flex-row items-stretch md:items-center font-heading text-white text-lg md:text-xl w-full md:w-auto rounded-sm overflow-hidden" id="filter-container">
+                    
+                    <!-- Le bouton "Tous" caché au départ -->
+                    <button class="filter-btn hidden px-6 md:px-8 py-4 md:py-5 hover:bg-white/10 transition-colors whitespace-nowrap shrink-0 text-center" data-filter="all">
+                        Tous
+                    </button>
+                    <!-- Séparateur pour "Tous" caché au départ -->
+                    <div class="filter-separator hidden shrink-0 self-center w-[60%] md:w-auto md:h-[24px]">
+                        <!-- Ligne horizontale Mobile -->
+                        <svg class="w-full h-[2px] text-white opacity-80 md:hidden" preserveAspectRatio="none">
+                            <line x1="0" y1="1" x2="100%" y2="1" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <!-- Ligne verticale Bureau -->
+                        <svg class="hidden md:block h-[24px] text-white opacity-80" width="2" viewBox="0 0 2 100" preserveAspectRatio="none">
+                            <line x1="1" y1="0" x2="1" y2="100" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+
+                    {categories.map((cat, index) => (
+                        <>
+                            <button class="filter-btn px-6 md:px-10 py-4 md:py-5 hover:bg-white/10 transition-colors lowercase tracking-wide whitespace-nowrap text-center" data-filter={cat}>
+                                {cat}
+                            </button>
+                            {index < categories.length - 1 && (
+                                <div class="shrink-0 self-center w-[60%] md:w-auto md:h-[24px]">
+                                    <svg class="w-full h-[2px] text-white opacity-80 md:hidden" preserveAspectRatio="none">
+                                        <line x1="0" y1="1" x2="100%" y2="1" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                    <svg class="hidden md:block h-[24px] text-white opacity-80" width="2" viewBox="0 0 2 100" preserveAspectRatio="none">
+                                        <line x1="1" y1="0" x2="1" y2="100" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            )}
+                        </>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Grille de Projets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16 pb-16" id="projects-grid">
+                {projects.map((p: CollectionEntry<'projets'>) => (
+                    <div class="project-card relative bg-white rounded-none shadow-[0_4px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group" data-category={p.data.category}>
+                        
+                        <div class="w-full h-[280px] overflow-hidden">
+                            <img src={p.data.thumbnail} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='/images/livre.jpeg'" />
+                        </div>
+                        
+                        <div class="p-8 pb-16 relative">
+                            <!-- Tag Date (Flottant) -->
+                            <div class="absolute -top-4 right-4 bg-white shadow-sm px-4 py-1 flex items-center gap-2 rounded-sm z-10 border border-gray-50">
+                                <span class="w-2 h-2 rounded-full bg-primary"></span>
+                                <span class="font-heading text-primary text-sm tracking-widest">{p.data.date.split(' ').pop()}</span>
+                            </div>
+                            
+                            <!-- Tag Titre (Flottant) -->
+                            <div class="absolute -top-4 left-4 bg-white shadow-sm px-5 py-2 flex items-center gap-3 rounded-sm z-10 border border-gray-50">
+                                <span class="w-3 h-3 rounded-full bg-primary shrink-0"></span>
+                                <span class="font-heading text-primary text-xl max-w-[200px] truncate">{p.data.title}</span>
+                            </div>
+
+                            <!-- Description projet -->
+                            <p class="font-body text-gray-700 text-[1.10rem] mt-6 line-clamp-3 leading-relaxed">
+                                {p.data.context}
+                            </p>
+                        </div>
+                        
+                        <!-- Bouton débordant "En savoir plus" stylisé -->
+                        <a href={`/projets/${p.id}`} class="absolute -bottom-4 -right-4 flex items-center justify-center gap-3 bg-primary text-white font-heading px-5 py-3 shadow-[0px_4px_12px_rgba(247,136,136,0.3)] hover:opacity-90 active:scale-95 transition-all outline outline-2 outline-white/20">
+                            <svg class="h-[18px] text-white opacity-80" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                                <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                            <span class="text-lg tracking-wide whitespace-nowrap">Vue détail</span>
+                            <svg class="h-[18px] text-white opacity-80" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                                <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                        </a>
+                        
+                    </div>
+                ))}
+            </div>
+            
+            <div id="empty-state" class="hidden text-center py-20">
+                <p class="font-heading text-accent text-3xl">Aucun projet trouvé.</p>
+            </div>
+
+        </section>
+    </div>
+    <CTA title="Envie de collaborer ?" buttonText="Contactez-moi" link="/contact" />
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+        const btnTous = document.querySelector('.filter-btn[data-filter="all"]');
+        const sepTous = document.querySelector('.filter-separator');
+        const emptyState = document.getElementById('empty-state');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-filter');
+                let visibleCount = 0;
+                
+                cards.forEach(c => {
+                    const card = c as HTMLElement;
+                    const isVisible = category === 'all' || card.getAttribute('data-category') === category;
+                    if (isVisible) {
+                        card.style.display = 'flex';
+                        // Timeout allows the display flex to apply before opacity for smooth fade if animation added later
+                        card.style.opacity = '1';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                        card.style.opacity = '0';
+                    }
+                });
+
+                if(emptyState) {
+                    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+                }
+
+                if (category !== 'all') {
+                    btnTous?.classList.remove('hidden');
+                    btnTous?.classList.add('block');
+                    sepTous?.classList.remove('hidden');
+                    sepTous?.classList.add('block');
+                } else {
+                    btnTous?.classList.add('hidden');
+                    btnTous?.classList.remove('block');
+                    sepTous?.classList.add('hidden');
+                    sepTous?.classList.remove('block');
+                }
+            });
+        });
+    });
+</script>

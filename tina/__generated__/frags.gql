@@ -1,0 +1,73 @@
+fragment ProjetsParts on Projets {
+  __typename
+  title
+  category
+  date
+  context
+  missions
+  hardSkills
+  softSkills
+  links {
+    __typename
+    label
+    type
+    url
+  }
+  tools {
+    __typename
+    name
+    logoUrl
+  }
+  thumbnail
+  body
+}
+
+fragment PagesParts on Pages {
+  __typename
+  ... on PagesAccueil {
+    heroTitle
+    heroDescription
+    heroImage
+    bioTitle
+    bioContent
+    hardskills {
+      __typename
+      title
+      tools
+    }
+    softskills
+    interets {
+      __typename
+      img
+      text
+    }
+  }
+  ... on PagesParcours {
+    pageTitle
+    pageSubtitle
+    experiences {
+      __typename
+      title
+      company
+      date
+      description
+      missions
+    }
+    formations {
+      __typename
+      title
+      school
+      location
+      date
+      description
+    }
+  }
+  ... on PagesContact {
+    heading
+    title
+    description
+    email
+    linkedin
+    formspreeId
+  }
+}

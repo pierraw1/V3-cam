@@ -1,0 +1,132 @@
+---
+// Header.astro
+const links = [
+    { title: "Qui suis je ?", url: "/" },
+    { title: "Mes projets", url: "/projets" },
+    { title: "Mon parcours", url: "/mon-parcours" },
+    { title: "Mon contact", url: "/contact" }
+];
+---
+
+<header class="bg-primary text-white font-heading w-full shadow-sm">
+    <!-- Version PC (lg et +) -->
+    <div class="hidden md:flex items-stretch h-[80px] w-full">
+        <!-- Logo Desktop (Extrême gauche) -->
+        <a href="/" class="flex items-center px-8 shrink-0 hover:opacity-80 transition-opacity">
+            <img src="/images/logo-pc.png" alt="Logo Portfolio" class="h-10 w-auto" />
+        </a>
+
+        <!-- Navigation (Les liens prennent tout l'espace disponible équitablement) -->
+        <nav class="flex flex-1 items-stretch">
+            {links.map((link, index) => (
+                <>
+                    <a href={link.url} class="flex-1 flex items-center justify-center hover:bg-white/20 transition-colors text-center px-4 text-lg">
+                        {link.title}
+                    </a>
+                    {index !== links.length - 1 && (
+                        <div class="flex items-center h-full">
+                            <svg class="h-[40px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                                <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+                            </svg>
+                        </div>
+                    )}
+                </>
+            ))}
+        </nav>
+    </div>
+
+    <!-- Version Mobile (< md) -->
+    <div class="md:hidden flex justify-between items-center p-[15px] w-full">
+        <!-- Logo Mobile -->
+        <a href="/" class="flex items-center hover:opacity-80 transition-opacity shrink-0">
+            <img src="/images/logo-mobile.png" alt="Camille Thomas" class="h-[45px] w-auto max-w-[200px]" />
+        </a>
+
+        <!-- Burger Container avec encadrement SVG -->
+        <div class="flex items-center gap-4 h-full">
+            <!-- Ligne SVG Gauche -->
+            <svg class="h-[30px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+            </svg>
+            
+            <!-- Bouton Burger centré -->
+            <button id="burger-open" class="bg-[#FFEDED]/60 p-2.5 rounded-xl flex flex-col justify-center items-center gap-[4px] hover:bg-[#FFEDED]/80 transition-colors" aria-label="Ouvrir le menu">
+                <span class="block w-6 h-[3px] bg-white rounded-full transition-transform"></span>
+                <span class="block w-6 h-[3px] bg-white rounded-full transition-opacity"></span>
+                <span class="block w-6 h-[3px] bg-white rounded-full transition-transform"></span>
+            </button>
+
+            <!-- Ligne SVG Droite -->
+            <svg class="h-[30px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Menu Overlay Mobile (Plein écran) -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-primary flex flex-col opacity-0 pointer-events-none scale-95 transition-all duration-300 ease-out origin-top md:hidden">
+        <!-- Barre du haut Overlay (identique au menu fermé pour continuité) -->
+        <div class="flex justify-between items-center p-[15px] w-full">
+            <a href="/" class="flex items-center hover:opacity-80 transition-opacity shrink-0">
+                <img src="/images/logo-mobile.png" alt="Camille Thomas" class="h-[45px] w-auto max-w-[200px]" />
+            </a>
+
+            <!-- Bouton Croix Fermeture -->
+            <div class="flex items-center gap-4 h-[50px]">
+                <svg class="h-[30px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                    <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+                </svg>
+                
+                <button id="burger-close" class="bg-[#FFEDED]/60 p-2.5 rounded-xl flex justify-center items-center hover:bg-[#FFEDED]/80 transition-colors" aria-label="Fermer le menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <svg class="h-[30px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
+                    <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Liens Mobile -->
+        <nav class="flex flex-col items-center justify-center flex-1 gap-10 pb-16">
+            {links.map(link => (
+                <a href={link.url} class="mobile-link text-3xl font-heading text-white hover:text-white/70 transition-colors">
+                    {link.title}
+                </a>
+            ))}
+        </nav>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const btnOpen = document.getElementById('burger-open');
+    const btnClose = document.getElementById('burger-close');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    
+    if(btnOpen && btnClose && menu) {
+        // Ouvrir le menu avec un fondu et léger scale
+        btnOpen.addEventListener('click', () => {
+            menu.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+            menu.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+            document.body.style.overflow = 'hidden'; 
+        });
+        
+        // Fermer le menu
+        const closeMenu = () => {
+            menu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+            menu.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+            document.body.style.overflow = '';
+        };
+
+        btnClose.addEventListener('click', closeMenu);
+        
+        // Fermer au clic sur un lien du menu
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+</script>

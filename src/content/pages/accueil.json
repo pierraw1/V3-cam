@@ -1,0 +1,52 @@
+{
+  "heroTitle": "Camille\nThomas",
+  "heroDescription": "Bienvenue dans mon univers, pour en savoir plus sur moi et mes projets je vous laisse l’explorer !",
+  "heroImage": "/images/photo-cv.png",
+  "bioTitle": "Qui suis je ?",
+  "bioContent": "Étudiante en BUT MMI (spé. Stratégie de communication) et alternante chargée de communication, je transforme les idées en messages qui accrochent. Mon terrain de jeu ? Le concret : entre créativité, photo et dessin, j’aime donner du relief aux projets. Prochaine étape : un master en alternance ou à l’international pour allier expertise et ouverture. En attendant, je vous laisse explorer mon portfolio… et me contacter pour toutes collaboration !✨",
+  "hardskills": [
+    {
+      "title": "Communication",
+      "tools": "Outils : Instagram, Facebook, Canva, Notion"
+    },
+    {
+      "title": "Marketing",
+      "tools": "Outils : Études de marché, Audit,"
+    },
+    {
+      "title": "Graphisme",
+      "tools": "Outils : Illustrator, Figma"
+    },
+    {
+      "title": "Photographie",
+      "tools": "Outils : Lightroom, Photoshop,"
+    },
+    {
+      "title": "Gestion de projet",
+      "tools": "Outils : Lightroom, Photoshop,"
+    }
+  ],
+  "softskills": [
+    "Force de proposition",
+    "Autonomie",
+    "Créativité",
+    "Curiosité",
+    "Adaptabilité",
+    "Travail d'équipe"
+  ],
+  "interets": [
+    {
+      "img": "/images/livre.jpeg",
+      "text": "Livre"
+    },
+    {
+      "img": "/images/sims.jpg",
+      "text": "Sims"
+    },
+    {
+      "img": "/images/dessin.jpg",
+      "text": "Dessin"
+    }
+  ],
+  "_template": "accueil"
+}

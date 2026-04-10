@@ -1,0 +1,27 @@
+---
+import Button from './Button.astro';
+import { getEntry } from 'astro:content';
+
+const accueil = await getEntry('pages', 'accueil');
+const data = accueil.data;
+---
+
+<section class="bg-white w-full py-24 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] lg:grid-cols-[1.5fr_1fr] gap-16 md:gap-12 items-center">
+        <!-- Colonne Texte -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <h2 class="text-4xl md:text-5xl font-heading text-accent mb-8">
+                {data.bioTitle}
+            </h2>
+            <p class="text-gray-800 font-body text-lg md:text-xl leading-relaxed max-w-2xl whitespace-pre-line">
+                {data.bioContent}
+            </p>
+        </div>
+
+        <!-- Colonne Boutons -->
+        <div class="flex flex-col md:flex-row items-center gap-4 justify-center py-6">
+            <Button href="/mon-parcours" text="Mon Parcours" />
+            <Button href="/cv" text="Mon CV" class="px-12" />
+        </div>
+    </div>
+</section>

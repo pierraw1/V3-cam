@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+import { getEntry } from 'astro:content';
+
+const parcoursPage = await getEntry('pages', 'parcours');
+const data = parcoursPage.data;
+---
+
+<Layout title="Mon Parcours | Portfolio">
+    <div class="bg-[#FFFBF8] min-h-screen pt-24 pb-32">
+        <section class="max-w-4xl mx-auto px-6 md:px-12">
+            
+            <div class="mb-24 text-center md:text-left">
+                <span class="uppercase tracking-widest text-sm text-primary mb-3 block font-bold">Curriculum Vitae</span>
+                <h1 class="text-5xl md:text-7xl font-heading text-accent tracking-wide mb-6">
+                    {data.pageTitle}
+                </h1>
+                <p class="text-accent/80 font-body text-lg md:text-xl max-w-2xl leading-relaxed whitespace-pre-line">
+                    {data.pageSubtitle}
+                </p>
+            </div>
+
+            <!-- SECTION : EXPÉRIENCES -->
+            <div class="mb-32">
+                <h2 class="relative inline-block font-heading text-4xl md:text-5xl text-accent mb-16 z-10 w-auto tracking-wide">
+                    Expériences Professionnelles
+                    <span class="absolute bottom-1 -left-2 w-[105%] h-[40%] bg-soft -z-10 rounded-sm"></span>
+                </h2>
+
+                <!-- Timeline Container -->
+                <div class="relative border-l-2 border-primary/30 ml-4 md:ml-6">
+                    {data.experiences.map((exp: any) => (
+                        <div class="relative mb-16 pl-10 md:pl-16 group">
+                            <!-- Timeline Dot -->
+                            <div class="absolute -left-[14px] top-8 w-7 h-7 rounded-full bg-primary border-4 border-[#FFFBF8] shadow-sm transform group-hover:scale-110 transition-transform"></div>
+                            
+                            <!-- Card Ultra Lisible -->
+                            <div class="bg-white p-8 md:p-12 shadow-[0_8px_30px_rgba(149,90,90,0.06)] border border-primary/10 rounded-[2px] transition-all hover:shadow-[0_12px_45px_rgba(149,90,90,0.1)]">
+                                
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6 mb-8">
+                                    <div>
+                                        <h3 class="font-heading text-3xl md:text-4xl text-accent mb-3">{exp.title}</h3>
+                                        <p class="font-body text-xl text-primary font-bold tracking-wide">{exp.company}</p>
+                                    </div>
+                                    <div class="bg-[#FFFBF8] text-accent font-heading px-5 py-2.5 rounded-[2px] text-[1.1rem] shrink-0 border border-primary/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+                                        {exp.date}
+                                    </div>
+                                </div>
+                                
+                                <p class="text-accent/90 font-body text-[1.15rem] leading-relaxed mb-8 whitespace-pre-line">
+                                    {exp.description}
+                                </p>
+                                
+                                {exp.missions && exp.missions.length > 0 && (
+                                    <div class="pt-8 border-t border-primary/20">
+                                        <h4 class="font-heading text-2xl text-accent mb-5">Missions clés</h4>
+                                        <ul class="list-disc pl-6 marker:text-primary font-body text-accent/80 space-y-3.5 text-[1.1rem]">
+                                            {exp.missions.map((m: any) => <li>{m}</li>)}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- SECTION : FORMATIONS -->
+            <div>
+                <h2 class="relative inline-block font-heading text-4xl md:text-5xl text-accent mb-16 z-10 w-auto tracking-wide">
+                    Formations
+                    <span class="absolute bottom-1 -left-2 w-[105%] h-[40%] bg-soft -z-10 rounded-sm"></span>
+                </h2>
+
+                <!-- Timeline Container -->
+                <div class="relative border-l-2 border-primary/30 ml-4 md:ml-6">
+                    {data.formations.map((form: any) => (
+                        <div class="relative mb-16 pl-10 md:pl-16 group">
+                            <!-- Timeline Dot (Blanc avec bordure corail) -->
+                            <div class="absolute -left-[14px] top-8 w-7 h-7 rounded-full bg-white border-[5px] border-primary shadow-sm transform group-hover:scale-110 transition-transform"></div>
+                            
+                            <!-- Card Formations -->
+                            <div class="bg-white/80 backdrop-blur-sm p-8 md:p-10 shadow-[0_4px_20px_rgba(149,90,90,0.04)] border border-primary/10 rounded-[2px] transition-all hover:bg-white hover:shadow-[0_8px_30px_rgba(149,90,90,0.08)]">
+                                
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6 mb-6">
+                                    <div>
+                                        <h3 class="font-heading text-2xl md:text-3xl text-accent mb-2">{form.title}</h3>
+                                        <p class="font-body text-lg text-primary font-bold">
+                                            {form.school} <span class="font-normal text-accent/60 mx-1">|</span> <span class="text-accent/80 font-normal">{form.location}</span>
+                                        </p>
+                                    </div>
+                                    <div class="bg-white text-accent font-heading px-5 py-2.5 rounded-[2px] text-[1.1rem] shrink-0 border border-primary/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+                                        {form.date}
+                                    </div>
+                                </div>
+                                
+                                <p class="text-accent/90 font-body text-[1.15rem] leading-relaxed whitespace-pre-line">
+                                    {form.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+        </section>
+    </div>
+    
+    <CTA />
+</Layout>
