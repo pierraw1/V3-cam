@@ -14,9 +14,13 @@ missions:
   - 'Réalisation de la maquette du site internet (arborescence, pages clés, UX)'
   - Analyse concurrentielle et veille du marché de la bijouterie en ligne
 hardSkills:
-  - Audit SEO/SMO
-  - Veille concurrentielle
-  - Planification
+  - Stratégie de marketing digital
+  - Branding et création de marque
+  - Stratégie de communication
+  - Conception de personas
+  - UX / UI (maquette de site web)
+  - Rédaction de contenus marketing
+  - 'Outils de maquettage (ex : Figma / Adobe XD)'
 softSkills:
   - Esprit d'analyse
   - Rigueur
