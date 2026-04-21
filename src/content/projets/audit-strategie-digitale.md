@@ -22,9 +22,12 @@ hardSkills:
   - Rédaction de contenus marketing
   - 'Outils de maquettage (ex : Figma / Adobe XD)'
 softSkills:
-  - Esprit d'analyse
-  - Rigueur
+  - Esprit d’analyse et sens stratégique
+  - Créativité
+  - Organisation et gestion de projet
   - Autonomie
+  - Capacité de synthèse
+  - Force de proposition
 links:
   - label: Accès au rapport
     type: drive
