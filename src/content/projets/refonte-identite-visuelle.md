@@ -1,12 +1,11 @@
 ---
-title: Refonte Identité Visuelle
+title: Refonte Identité Visuelle Granity
 category: Graphisme
 date: Janvier 2024
-context: >-
-  Modernisation de l'image d'un restaurant local pour attirer une clientèle plus jeune tout en préservant son cachet historique.
+context: Modernisation de l'image d'un restaurant local pour attirer une clientèle plus jeune tout en préservant son cachet historique.
 missions:
   - Création d'un nouveau logo et d'une charte graphique
-  - Déclinaison sur les supports de communication (menus, cartes de visite)
+  - 'Déclinaison sur les supports de communication (menus, cartes de visite)'
   - Livrables pour les réseaux sociaux
 hardSkills:
   - Création vectorielle
@@ -26,3 +25,4 @@ tools:
   - name: Figma
 thumbnail: /images/img-projet.jpg
 ---
+
