@@ -29,6 +29,15 @@ softSkills:
   - Autonomie
   - Rigueur
   - Aisance relationnelle
+links:
+  - label: Book Photos
+    type: drive
+    url: 'https://photos.app.goo.gl/RpB1sSXnvbSvbU7d8'
+tools:
+  - name: Photoshop
+    logoUrl: /images/icone/L_Fichier%2012Photoshop.svg
+  - name: LightRoom
+    logoUrl: /images/icone/L_Fichier%207lightroom.svg
 thumbnail: /images/bannière/IMG_7720.jpg
 ---
 
