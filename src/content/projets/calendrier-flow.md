@@ -31,7 +31,7 @@ softSkills:
 links:
   - label: Découvrir la série
     type: pdf
-    url: '#'
+    url: 'https://assets.tina.io/afb77850-f99f-4a0a-8ca6-ba635ca2c706/Diapo_synthèse_flow (1).pdf'
 tools:
   - name: Figma
     logoUrl: /images/icone/L_Fichier%204Figma.svg
@@ -39,5 +39,4 @@ tools:
     logoUrl: /images/icone/L_Fichier%203Canva.svg
 thumbnail: /images/bannière/FLUX-2026-04-26-14-37-44.jpeg
 ---
-
 
