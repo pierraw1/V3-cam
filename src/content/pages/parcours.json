@@ -1,5 +1,4 @@
 {
-  "_template": "parcours",
   "pageTitle": "Mon Parcours",
   "pageSubtitle": "Découvrez mes expériences professionnelles formatrices et mon cursus académique, façonnant ma vision de la communication aujourd'hui.",
   "experiences": [
@@ -36,10 +35,11 @@
     },
     {
       "title": "Baccalauréat Général",
-      "school": "Lycée",
-      "location": "France",
-      "date": "2020 - 2022",
-      "description": "Spécialités pertinentes (Arts Plastiques, etc.) avec mention."
+      "school": "Lycée Ernest Renan",
+      "location": "France, Saint-Brieuc",
+      "date": "2021 - 2023",
+      "description": "Spécialités : Arts plastiques et Humanités, Littérature et Philosophie\nOption : Droit et grands enjeux du monde contemporain\n\nDurant mes années de lycée, j’ai également porté un projet à dimension sociale en collaboration avec le programme Erasmus. Cette initiative, soutenue par la direction de mon établissement et validée par Erasmus, m’a permis de participer à un échange scolaire à Copenhague, au Danemark, et de renforcer mes compétences en anglais."
     }
-  ]
+  ],
+  "_template": "parcours"
 }
