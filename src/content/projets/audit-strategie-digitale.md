@@ -33,8 +33,12 @@ links:
     type: drive
     url: '#'
 tools:
-  - name: Google Analytics
-  - name: Excel
-thumbnail: /images/img-projet.jpg
+  - name: Canva
+    logoUrl: /images/icone/L_Fichier%203Canva.svg
+  - name: Figma
+    logoUrl: /images/icone/L_Fichier%204Figma.svg
+  - name: Illustrator
+    logoUrl: /images/icone/L_Fichier%2010illustrator.svg
+thumbnail: /images/banni%C3%A8re/banni%C3%A8re_JH.png
 ---
 
