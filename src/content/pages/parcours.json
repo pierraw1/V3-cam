@@ -4,34 +4,44 @@
   "experiences": [
     {
       "title": "Chargée de Communication (Alternance)",
-      "company": "Agence Créative XYZ",
-      "date": "Sept. 2023 - Présent",
-      "description": "Gestion complète de la stratégie digitale pour plusieurs clients dans le secteur mode et lifestyle. Accompagnement de A à Z sur la conception créative.",
+      "company": "Groupe Partélios",
+      "date": "Septembre 2026 - Juillet 2028",
+      "description": "Dans le cadre de mon MBA Management, Communication Digitale & IA, j’effectue une alternance en tant que chargée de mission communication au sein du Groupe Partélios, un bailleur social.\n\nPour cette seconde expérience en communication, j’ai fait le choix de rejoindre une structure très différente de la première. Mon objectif était de découvrir d’autres types d’organisations, d’enjeux et de modes de fonctionnement, tout en élargissant mes compétences sur des missions variées au sein d’une équipe communication.",
       "missions": [
-        "Animation des réseaux sociaux (Instagram, TikTok, LinkedIn)",
-        "Création de visuels vectoriels et montage de vidéos courtes",
-        "Suivi, analyse des statistiques (KPIs) et reporting mensuel"
+        "Conception de visuels (plaquettes, newsletter, affiche ...)",
+        "Préparation des comités internes",
+        "Gestion des relations avec les partenaires et fournisseurs",
+        "Assurance du suivi des différentes actions du pôle"
       ]
     },
     {
-      "title": "Stage Assistant.e Chef de Projet",
-      "company": "Startup Locale Ouest",
-      "date": "Avril 2023 - Juillet 2023",
-      "description": "Assistance globale dans la planification de divers événements promotionnels et refonte de l'identité de marque.",
+      "title": "Alternante Chargée de communication",
+      "company": "Biscuiterie Des Îles",
+      "date": "Février 2025 - Juin 2026",
+      "description": "Dans le cadre de ma formation en Métiers du Multimédia et de l’Internet (MMI), j’ai réalisé une alternance au sein de la Biscuiterie des Îles. Cette expérience m’a permis d’évoluer dans une entreprise artisanale avec une forte identité de marque, où les enjeux de communication et de développement digital sont essentiels.\n\nJ’y ai occupé un rôle polyvalent en communication digitale, avec pour objectif de renforcer la présence en ligne de l’entreprise, d’optimiser ses performances web et de valoriser son image de marque.",
       "missions": [
-        "Veille concurrentielle et réalisation de benchmarks approfondis",
-        "Création de supports de communication print et web",
-        "Participation active à l'organisation d'un salon professionnel"
+        "Refonte et optimisation du SEO du site e-commerce (WordPress / WooCommerce)",
+        "Création de contenus visuels et supports de communication",
+        "Travail sur l’identité visuelle et la cohérence graphique",
+        "Participation à la stratégie de communication digitale",
+        "Optimisation des process liés aux livraisons (outil Colissimo)"
       ]
     }
   ],
   "formations": [
     {
+      "title": "MBA Management Communication Digitale & IA",
+      "school": "MBway Caen",
+      "location": "France, Caen",
+      "date": "2026-2028",
+      "description": "J’ai choisi de poursuivre avec un MBA Management et Communication Digitale (MCD) afin d’approfondir mes compétences en stratégie et en gestion de projet. Cette formation me permet de mieux comprendre les enjeux des organisations, de développer une vision plus globale de la communication digitale et de travailler sur des projets à dimension plus stratégique. Elle s’inscrit dans la continuité de mon parcours en MMI, en renforçant mon profil entre créativité et management."
+    },
+    {
       "title": "BUT MMI (Métiers du Multimédia et de l'Internet)",
-      "school": "IUT",
-      "location": "France",
-      "date": "2022 - 2025",
-      "description": "Spécialité Stratégie de Communication et Design Numérique. Apprentissage hybride mêlant créativité, développement web et stratégie marketing."
+      "school": "IUT de Lannion",
+      "location": "France, Lannion",
+      "date": "2023 - 2026",
+      "description": "Spécialité : parcours stratégie de communication numérique et design d’expérience.\n\nJ’ai choisi la formation Métiers du Multimédia et de l’Internet (MMI) pour sa polyvalence et son approche concrète. Elle me permet de toucher à plusieurs domaines comme le design, l’audiovisuel, le développement web et la communication, tout en travaillant sur des projets réels. C’est exactement ce que je recherchais : une formation qui allie créativité, technique et stratégie."
     },
     {
       "title": "Baccalauréat Général",
