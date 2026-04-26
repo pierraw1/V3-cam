@@ -29,7 +29,7 @@ softSkills:
   - Esprit d’innovation
   - Capacité à conceptualiser une expérience
 links:
-  - label: Découvrir la série
+  - label: Diapositive du projet
     type: pdf
     url: 'https://assets.tina.io/afb77850-f99f-4a0a-8ca6-ba635ca2c706/Diapo_synthèse_flow (1).pdf'
 tools:
