@@ -30,17 +30,18 @@ softSkills:
   - Sens du détail
   - Rigueur
 links:
-  - label: Dossier de communication
-    type: pdf
-    url: '#'
-  - label: Dossier Drive complet
-    type: drive
-    url: '#'
+  - label: Affiche
+    type: lien
+    url: 'https://assets.tina.io/afb77850-f99f-4a0a-8ca6-ba635ca2c706/bannière/Affiche_CCampan_QMoenner_CThomas.jpg'
 tools:
   - name: Photoshop
     logoUrl: /images/icone/L_Fichier%2012Photoshop.svg
   - name: Canva
-  - name: Meta Business Suite
-thumbnail: /images/img-projet.jpg
+    logoUrl: /images/icone/L_Fichier%203Canva.svg
+  - name: HTML
+    logoUrl: /images/icone/L_Fichier%2016HTML.svg
+  - name: CSS
+    logoUrl: /images/icone/L_Fichier%2017CSS.svg
+thumbnail: /images/bannière/Affiche_CCampan_QMoenner_CThomas.jpg
 ---
 
