@@ -30,12 +30,13 @@ softSkills:
   - Capacité à conceptualiser une expérience
 links:
   - label: Découvrir la série
-    type: lien
+    type: pdf
     url: '#'
 tools:
   - name: Figma
     logoUrl: /images/icone/L_Fichier%204Figma.svg
-  - name: Illustrator
-thumbnail: /images/img-projet.jpg
+  - name: Canva
+    logoUrl: /images/icone/L_Fichier%203Canva.svg
+thumbnail: /images/bannière/FLUX-2026-04-26-14-37-44.jpeg
 ---
 
