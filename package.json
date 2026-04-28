@@ -11,6 +11,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "overrides": {
+    "vite": "^7",
+    "@tinacms/cli": {
+      "vite": "^5"
+    }
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.4",
