@@ -3,5 +3,4 @@ dist/
 .env
 .env.*
 .astro/
-tina/__generated__/
 .DS_Store
