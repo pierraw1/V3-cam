@@ -4,6 +4,7 @@ fragment ProjetsParts on Projets {
   category
   date
   context
+  anecdote
   missions
   hardSkills
   softSkills
@@ -30,6 +31,7 @@ fragment PagesParts on Pages {
     heroImage
     bioTitle
     bioContent
+    cvFile
     hardskills {
       __typename
       title

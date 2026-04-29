@@ -202,6 +202,7 @@ export type Projets = Node & Document & {
   category: Scalars['String']['output'];
   date: Scalars['String']['output'];
   context: Scalars['String']['output'];
+  anecdote?: Maybe<Scalars['String']['output']>;
   missions: Array<Scalars['String']['output']>;
   hardSkills: Array<Scalars['String']['output']>;
   softSkills: Array<Scalars['String']['output']>;
@@ -250,6 +251,7 @@ export type ProjetsFilter = {
   category?: InputMaybe<StringFilter>;
   date?: InputMaybe<StringFilter>;
   context?: InputMaybe<StringFilter>;
+  anecdote?: InputMaybe<StringFilter>;
   missions?: InputMaybe<StringFilter>;
   hardSkills?: InputMaybe<StringFilter>;
   softSkills?: InputMaybe<StringFilter>;
@@ -291,6 +293,7 @@ export type PagesAccueil = Node & Document & {
   heroImage?: Maybe<Scalars['String']['output']>;
   bioTitle?: Maybe<Scalars['String']['output']>;
   bioContent?: Maybe<Scalars['String']['output']>;
+  cvFile?: Maybe<Scalars['String']['output']>;
   hardskills?: Maybe<Array<Maybe<PagesAccueilHardskills>>>;
   softskills?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
   interets?: Maybe<Array<Maybe<PagesAccueilInterets>>>;
@@ -359,6 +362,7 @@ export type PagesAccueilFilter = {
   heroImage?: InputMaybe<ImageFilter>;
   bioTitle?: InputMaybe<StringFilter>;
   bioContent?: InputMaybe<StringFilter>;
+  cvFile?: InputMaybe<ImageFilter>;
   hardskills?: InputMaybe<PagesAccueilHardskillsFilter>;
   softskills?: InputMaybe<StringFilter>;
   interets?: InputMaybe<PagesAccueilInteretsFilter>;
@@ -512,6 +516,7 @@ export type ProjetsMutation = {
   category?: InputMaybe<Scalars['String']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
   context?: InputMaybe<Scalars['String']['input']>;
+  anecdote?: InputMaybe<Scalars['String']['input']>;
   missions?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   hardSkills?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   softSkills?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -537,6 +542,7 @@ export type PagesAccueilMutation = {
   heroImage?: InputMaybe<Scalars['String']['input']>;
   bioTitle?: InputMaybe<Scalars['String']['input']>;
   bioContent?: InputMaybe<Scalars['String']['input']>;
+  cvFile?: InputMaybe<Scalars['String']['input']>;
   hardskills?: InputMaybe<Array<InputMaybe<PagesAccueilHardskillsMutation>>>;
   softskills?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   interets?: InputMaybe<Array<InputMaybe<PagesAccueilInteretsMutation>>>;
@@ -580,9 +586,9 @@ export type PagesMutation = {
   contact?: InputMaybe<PagesContactMutation>;
 };
 
-export type ProjetsPartsFragment = { __typename: 'Projets', title: string, category: string, date: string, context: string, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null };
+export type ProjetsPartsFragment = { __typename: 'Projets', title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null };
 
-type PagesParts_PagesAccueil_Fragment = { __typename: 'PagesAccueil', heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, softskills?: Array<string | null> | null, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null };
+type PagesParts_PagesAccueil_Fragment = { __typename: 'PagesAccueil', heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, cvFile?: string | null, softskills?: Array<string | null> | null, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null };
 
 type PagesParts_PagesParcours_Fragment = { __typename: 'PagesParcours', pageTitle?: string | null, pageSubtitle?: string | null, experiences?: Array<{ __typename: 'PagesParcoursExperiences', title?: string | null, company?: string | null, date?: string | null, description?: string | null, missions?: Array<string | null> | null } | null> | null, formations?: Array<{ __typename: 'PagesParcoursFormations', title?: string | null, school?: string | null, location?: string | null, date?: string | null, description?: string | null } | null> | null };
 
@@ -595,7 +601,7 @@ export type ProjetsQueryVariables = Exact<{
 }>;
 
 
-export type ProjetsQuery = { __typename?: 'Query', projets: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } };
+export type ProjetsQuery = { __typename?: 'Query', projets: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } };
 
 export type ProjetsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -607,14 +613,14 @@ export type ProjetsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ProjetsConnectionQuery = { __typename?: 'Query', projetsConnection: { __typename?: 'ProjetsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjetsConnectionEdges', cursor: string, node?: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } | null } | null> | null } };
+export type ProjetsConnectionQuery = { __typename?: 'Query', projetsConnection: { __typename?: 'ProjetsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjetsConnectionEdges', cursor: string, node?: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } | null } | null> | null } };
 
 export type PagesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'PagesAccueil', id: string, heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, softskills?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null } | { __typename: 'PagesParcours', id: string, pageTitle?: string | null, pageSubtitle?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experiences?: Array<{ __typename: 'PagesParcoursExperiences', title?: string | null, company?: string | null, date?: string | null, description?: string | null, missions?: Array<string | null> | null } | null> | null, formations?: Array<{ __typename: 'PagesParcoursFormations', title?: string | null, school?: string | null, location?: string | null, date?: string | null, description?: string | null } | null> | null } | { __typename: 'PagesContact', id: string, heading: string, title: string, description?: string | null, email: string, linkedin?: string | null, formspreeId: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'PagesAccueil', id: string, heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, cvFile?: string | null, softskills?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null } | { __typename: 'PagesParcours', id: string, pageTitle?: string | null, pageSubtitle?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experiences?: Array<{ __typename: 'PagesParcoursExperiences', title?: string | null, company?: string | null, date?: string | null, description?: string | null, missions?: Array<string | null> | null } | null> | null, formations?: Array<{ __typename: 'PagesParcoursFormations', title?: string | null, school?: string | null, location?: string | null, date?: string | null, description?: string | null } | null> | null } | { __typename: 'PagesContact', id: string, heading: string, title: string, description?: string | null, email: string, linkedin?: string | null, formspreeId: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type PagesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -626,7 +632,7 @@ export type PagesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'PagesAccueil', id: string, heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, softskills?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null } | { __typename: 'PagesParcours', id: string, pageTitle?: string | null, pageSubtitle?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experiences?: Array<{ __typename: 'PagesParcoursExperiences', title?: string | null, company?: string | null, date?: string | null, description?: string | null, missions?: Array<string | null> | null } | null> | null, formations?: Array<{ __typename: 'PagesParcoursFormations', title?: string | null, school?: string | null, location?: string | null, date?: string | null, description?: string | null } | null> | null } | { __typename: 'PagesContact', id: string, heading: string, title: string, description?: string | null, email: string, linkedin?: string | null, formspreeId: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'PagesAccueil', id: string, heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, cvFile?: string | null, softskills?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null } | { __typename: 'PagesParcours', id: string, pageTitle?: string | null, pageSubtitle?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, experiences?: Array<{ __typename: 'PagesParcoursExperiences', title?: string | null, company?: string | null, date?: string | null, description?: string | null, missions?: Array<string | null> | null } | null> | null, formations?: Array<{ __typename: 'PagesParcoursFormations', title?: string | null, school?: string | null, location?: string | null, date?: string | null, description?: string | null } | null> | null } | { __typename: 'PagesContact', id: string, heading: string, title: string, description?: string | null, email: string, linkedin?: string | null, formspreeId: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const ProjetsPartsFragmentDoc = gql`
     fragment ProjetsParts on Projets {
@@ -635,6 +641,7 @@ export const ProjetsPartsFragmentDoc = gql`
   category
   date
   context
+  anecdote
   missions
   hardSkills
   softSkills
@@ -662,6 +669,7 @@ export const PagesPartsFragmentDoc = gql`
     heroImage
     bioTitle
     bioContent
+    cvFile
     hardskills {
       __typename
       title
@@ -880,7 +888,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/2.2/content/afb77850-f99f-4a0a-8ca6-ba635ca2c706/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

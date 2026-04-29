@@ -1,0 +1,8 @@
+2. Point important à retenir pour l'avenir
+
+Si tu modifies le schéma TinaCMS (ajoutes un nouveau champ, une nouvelle collection, etc.), npm run build:cms est actuellement cassé à cause du conflit Vite/esbuild. Dans ce cas, tu devras refaire manuellement ce qu'on a fait aujourd'hui :
+
+Relancer npm run dev pour générer les fichiers localement
+Corriger les clés dans tina/__generated__/client.ts et types.ts
+Reconstruire l'admin panel ou patcher le clientId dans le bundle
+C'est le seul point fragile. Pour le reste — déploiement, CMS, site statique — tout est en ordre.

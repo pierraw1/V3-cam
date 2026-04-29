@@ -2,6 +2,7 @@
 title: Calendrier Flow
 category: Graphisme
 date: Décembre 2025
+anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Ce projet a été réalisé dans le cadre d’un workshop de Noël sur une semaine, avec pour objectif de concevoir une expérience interactive autour d’un calendrier de l’Avent digital, inspiré de l’univers du film d’animation Flow.
   Le projet s’inscrit dans le domaine du multimédia et de l’UI/UX, avec une réflexion centrée sur l’interaction utilisateur, l’immersion et la cohérence avec l’univers narratif.

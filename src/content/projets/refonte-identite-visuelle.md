@@ -2,6 +2,7 @@
 title: Documentaire Social
 category: Audiovisuel
 date: septembre 2024
+anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Ce projet a été réalisé dans le cadre d’un cours d’audiovisuel, avec pour objectif de produire un documentaire autour des cancers pédiatriques.
   L’enjeu était de traiter un sujet sensible et complexe en proposant un contenu à la fois informatif, accessible et humain, à travers des témoignages et des interventions pertinentes.

@@ -7,6 +7,7 @@ const projets = defineCollection({
     title: z.string(),
     category: z.enum(['Audiovisuel', 'Communication', 'Graphisme']),
     date: z.string(),
+    anecdote: z.string().optional(),
     context: z.string(),
     missions: z.array(z.string()),
     softSkills: z.array(z.string()),

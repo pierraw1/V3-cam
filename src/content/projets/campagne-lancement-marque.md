@@ -2,6 +2,7 @@
 title: Data-visualisation
 category: Graphisme
 date: Novembre 2024
+anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Ce projet a été réalisé dans le cadre d’un projet de cours, avec pour objectif de concevoir une data visualisation autour de la thématique des inégalités d’accès à l’éducation chez les femmes en Afghanistan.
   Le travail s’est articulé autour de la création d’une affiche infographique et d’une page web interactive, pensées pour transmettre des données complexes de manière claire, visuelle et engageante.

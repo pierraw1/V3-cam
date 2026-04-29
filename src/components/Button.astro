@@ -3,12 +3,13 @@ interface Props {
     href?: string;
     text: string;
     class?: string;
+    target?: string;
 }
 
-const { href = "#", text, class: className } = Astro.props;
+const { href = "#", text, class: className, target } = Astro.props;
 ---
 
-<a href={href} class={`inline-flex items-center justify-center gap-4 bg-primary text-white font-heading px-8 py-5 shadow-[4px_4px_15px_rgba(0,0,0,0.1)] hover:opacity-90 transition-all active:scale-[0.98] ${className || ''}`}>
+<a href={href} target={target} class={`inline-flex items-center justify-center gap-4 bg-primary text-white font-heading px-8 py-5 shadow-[4px_4px_15px_rgba(0,0,0,0.1)] hover:opacity-90 transition-all active:scale-[0.98] ${className || ''}`}>
     <!-- Séparateur SVG Gauche -->
     <svg class="h-[20px] text-white" width="1" viewBox="0 0 1 100" preserveAspectRatio="none">
         <line x1="0.5" y1="0" x2="0.5" y2="100" stroke="currentColor" stroke-width="1" />

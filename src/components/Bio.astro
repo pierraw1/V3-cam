@@ -21,7 +21,7 @@ const data = accueil.data;
         <!-- Colonne Boutons -->
         <div class="flex flex-col md:flex-row items-center gap-4 justify-center py-6">
             <Button href="/mon-parcours" text="Mon Parcours" />
-            <Button href="/cv" text="Mon CV" class="px-12" />
+            <Button href={data.cvFile || "/images/CV-CamilleT.pdf"} text="Mon CV" class="px-12" target="_blank" />
         </div>
     </div>
 </section>

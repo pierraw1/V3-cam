@@ -2,6 +2,7 @@
 title: Flamby Show
 category: Audiovisuel
 date: Octobre 2023
+anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Le Flamby Show est un projet audiovisuel personnel, mené entre amis, consistant en la création et la diffusion d’une émission en direct réalisée à l’aide du matériel audiovisuel de l’IUT.
   Diffusée deux fois par mois, l’émission avait pour objectif de proposer un format live dynamique, tout en mettant en pratique les compétences techniques liées à la production audiovisuelle, de la préparation du plateau jusqu’à la captation et la gestion du matériel.

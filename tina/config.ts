@@ -57,6 +57,14 @@ export default defineConfig({
           },
           {
             type: "string",
+            name: "anecdote",
+            label: "Anecdote sur le projet",
+            ui: {
+              component: "textarea"
+            },
+          },
+          {
+            type: "string",
             name: "missions",
             label: "Missions (Bullet points)",
             list: true,
@@ -134,6 +142,7 @@ export default defineConfig({
               { type: "image", name: "heroImage", label: "Image Hero principale (photo-cv)" },
               { type: "string", name: "bioTitle", label: "Titre Bio" },
               { type: "string", name: "bioContent", label: "Contenu Bio", ui: { component: "textarea" } },
+              { type: "image", name: "cvFile", label: "Fichier CV (PDF ou Image)" },
               {
                 type: "object",
                 name: "hardskills",
