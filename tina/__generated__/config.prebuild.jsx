@@ -113,8 +113,23 @@ var config_default = defineConfig({
           {
             type: "image",
             name: "thumbnail",
-            label: "Image Principale (Banni\xE8re/Miniature)",
+            label: "Miniature (Image carte / liste de projets)",
             required: true
+          },
+          {
+            type: "string",
+            name: "thumbnailAlt",
+            label: "Texte alternatif Miniature (alt)"
+          },
+          {
+            type: "image",
+            name: "banner",
+            label: "Banni\xE8re (Image en-t\xEAte de la page d\xE9tail)"
+          },
+          {
+            type: "string",
+            name: "bannerAlt",
+            label: "Texte alternatif Banni\xE8re (alt)"
           },
           {
             type: "rich-text",

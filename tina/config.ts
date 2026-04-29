@@ -113,8 +113,23 @@ export default defineConfig({
           {
             type: "image",
             name: "thumbnail",
-            label: "Image Principale (Bannière/Miniature)",
+            label: "Miniature (Image carte / liste de projets)",
             required: true,
+          },
+          {
+            type: "string",
+            name: "thumbnailAlt",
+            label: "Texte alternatif Miniature (alt)",
+          },
+          {
+            type: "image",
+            name: "banner",
+            label: "Bannière (Image en-tête de la page détail)",
+          },
+          {
+            type: "string",
+            name: "bannerAlt",
+            label: "Texte alternatif Bannière (alt)",
           },
           {
             type: "rich-text",

@@ -209,6 +209,9 @@ export type Projets = Node & Document & {
   links?: Maybe<Array<Maybe<ProjetsLinks>>>;
   tools?: Maybe<Array<Maybe<ProjetsTools>>>;
   thumbnail: Scalars['String']['output'];
+  thumbnailAlt?: Maybe<Scalars['String']['output']>;
+  banner?: Maybe<Scalars['String']['output']>;
+  bannerAlt?: Maybe<Scalars['String']['output']>;
   body?: Maybe<Scalars['JSON']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -258,6 +261,9 @@ export type ProjetsFilter = {
   links?: InputMaybe<ProjetsLinksFilter>;
   tools?: InputMaybe<ProjetsToolsFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
+  thumbnailAlt?: InputMaybe<StringFilter>;
+  banner?: InputMaybe<ImageFilter>;
+  bannerAlt?: InputMaybe<StringFilter>;
   body?: InputMaybe<RichTextFilter>;
 };
 
@@ -523,6 +529,9 @@ export type ProjetsMutation = {
   links?: InputMaybe<Array<InputMaybe<ProjetsLinksMutation>>>;
   tools?: InputMaybe<Array<InputMaybe<ProjetsToolsMutation>>>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
+  thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
+  banner?: InputMaybe<Scalars['String']['input']>;
+  bannerAlt?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
@@ -586,7 +595,7 @@ export type PagesMutation = {
   contact?: InputMaybe<PagesContactMutation>;
 };
 
-export type ProjetsPartsFragment = { __typename: 'Projets', title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null };
+export type ProjetsPartsFragment = { __typename: 'Projets', title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, thumbnailAlt?: string | null, banner?: string | null, bannerAlt?: string | null, body?: any | null, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null };
 
 type PagesParts_PagesAccueil_Fragment = { __typename: 'PagesAccueil', heroTitle: string, heroDescription?: string | null, heroImage?: string | null, bioTitle?: string | null, bioContent?: string | null, cvFile?: string | null, softskills?: Array<string | null> | null, hardskills?: Array<{ __typename: 'PagesAccueilHardskills', title?: string | null, tools?: string | null } | null> | null, interets?: Array<{ __typename: 'PagesAccueilInterets', img?: string | null, text?: string | null } | null> | null };
 
@@ -601,7 +610,7 @@ export type ProjetsQueryVariables = Exact<{
 }>;
 
 
-export type ProjetsQuery = { __typename?: 'Query', projets: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } };
+export type ProjetsQuery = { __typename?: 'Query', projets: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, thumbnailAlt?: string | null, banner?: string | null, bannerAlt?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } };
 
 export type ProjetsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -613,7 +622,7 @@ export type ProjetsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ProjetsConnectionQuery = { __typename?: 'Query', projetsConnection: { __typename?: 'ProjetsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjetsConnectionEdges', cursor: string, node?: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } | null } | null> | null } };
+export type ProjetsConnectionQuery = { __typename?: 'Query', projetsConnection: { __typename?: 'ProjetsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjetsConnectionEdges', cursor: string, node?: { __typename: 'Projets', id: string, title: string, category: string, date: string, context: string, anecdote?: string | null, missions: Array<string>, hardSkills: Array<string>, softSkills: Array<string>, thumbnail: string, thumbnailAlt?: string | null, banner?: string | null, bannerAlt?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, links?: Array<{ __typename: 'ProjetsLinks', label?: string | null, type?: string | null, url?: string | null } | null> | null, tools?: Array<{ __typename: 'ProjetsTools', name?: string | null, logoUrl?: string | null } | null> | null } | null } | null> | null } };
 
 export type PagesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -657,6 +666,9 @@ export const ProjetsPartsFragmentDoc = gql`
     logoUrl
   }
   thumbnail
+  thumbnailAlt
+  banner
+  bannerAlt
   body
 }
     `;

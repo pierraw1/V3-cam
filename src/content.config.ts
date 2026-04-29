@@ -26,6 +26,9 @@ const projets = defineCollection({
       })
     ),
     thumbnail: z.string(),
+    thumbnailAlt: z.string().optional(),
+    banner: z.string().optional(),
+    bannerAlt: z.string().optional(),
   }),
 });
 

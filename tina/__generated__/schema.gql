@@ -113,6 +113,9 @@ type Projets implements Node & Document {
   links: [ProjetsLinks]
   tools: [ProjetsTools]
   thumbnail: String!
+  thumbnailAlt: String
+  banner: String
+  bannerAlt: String
   body: JSON
   id: ID!
   _sys: SystemInfo!
@@ -162,6 +165,9 @@ input ProjetsFilter {
   links: ProjetsLinksFilter
   tools: ProjetsToolsFilter
   thumbnail: ImageFilter
+  thumbnailAlt: StringFilter
+  banner: ImageFilter
+  bannerAlt: StringFilter
   body: RichTextFilter
 }
 
@@ -358,6 +364,9 @@ input ProjetsMutation {
   links: [ProjetsLinksMutation]
   tools: [ProjetsToolsMutation]
   thumbnail: String
+  thumbnailAlt: String
+  banner: String
+  bannerAlt: String
   body: JSON
 }
 

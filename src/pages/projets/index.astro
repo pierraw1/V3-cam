@@ -65,7 +65,7 @@ const categories = [...new Set(projects.map((p: CollectionEntry<'projets'>) => p
                     <div class="project-card relative bg-white rounded-none shadow-[0_4px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group" data-category={p.data.category}>
                         
                         <div class="w-full h-[280px] overflow-hidden">
-                            <img src={p.data.thumbnail} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='/images/livre.jpeg'" />
+                            <img src={p.data.thumbnail} alt={p.data.thumbnailAlt || p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='/images/livre.jpeg'" />
                         </div>
                         
                         <div class="p-8 pb-16 relative">

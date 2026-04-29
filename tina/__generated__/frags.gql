@@ -20,6 +20,9 @@ fragment ProjetsParts on Projets {
     logoUrl
   }
   thumbnail
+  thumbnailAlt
+  banner
+  bannerAlt
   body
 }
 
