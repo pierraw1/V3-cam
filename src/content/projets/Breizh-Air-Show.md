@@ -6,7 +6,7 @@ context: |-
   Le projet Breizh Air Show s’inscrit dans une mission de photographie bénévole réalisée pour une convention aérienne.
   Dans ce cadre, j’ai participé à la couverture visuelle de l’événement, avec pour objectif de valoriser à la fois les temps forts, les invités VIP, ainsi que l’ambiance générale.
   Ce projet relève du domaine de l’audiovisuel événementiel, nécessitant réactivité, adaptation et qualité de production dans un environnement dynamique.
-anecdote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+anecdote: 'Le samedi soir, nous avons été invités à la soirée VIP, avec un spectacle aérien nocturne et un concert au style années folles. Un très beau moment pour clôturer cette première journée en beauté !'
 missions:
   - Captation photographique de l’espace VIP et des invités
   - Réalisation de reportages photo sur les avions et les démonstrations aériennes
