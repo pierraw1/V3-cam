@@ -2,11 +2,11 @@
 title: Régate des IUT
 category: Communication
 date: Octobre 2025
-anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Le projet Concours Régate des IUT a été réalisé dans le cadre d’un projet de cours avec un client réel, à l’occasion de la Régate des IUT.
    L’objectif était de concevoir une stratégie de communication globale afin de valoriser l’équipage, renforcer son image et attirer des partenaires, à travers des supports visuels et audiovisuels professionnels.
    Dans ce cadre, notre équipe s’est distinguée en terminant 3ᵉ du challenge vidéo, grâce au nombreux like et repartage sur les réseaux instagram et facebook.
+anecdote: 'Pour filmer notre vidéo, nous avons dû monter sur un zodiac afin de suivre l’équipe en plein entraînement. Ce fut une expérience enrichissante et une belle découverte, tant de l’équipage que de l’univers nautique.'
 missions:
   - Analyse des besoins du client et définition des objectifs de communication
   - Création d’un dossier de sponsoring destiné aux partenaires
