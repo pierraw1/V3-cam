@@ -2,10 +2,10 @@
 title: Jewerly Haven
 category: Communication
 date: Octobre 2025
-anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |
   Le projet Jewelry Haven a été réalisé dans le cadre d’un cours de webmarketing en BUT 3, avec pour objectif de concevoir une marque fictive de bijoux et de développer une stratégie de marketing digital et de communication complète.
   Ce projet visait à structurer l’identité de marque, définir un positionnement cohérent et imaginer une présence digitale performante, notamment à travers la création d’une maquette de site internet pensée pour l’expérience utilisateur et la conversion.
+anecdote: 'Ce projet est l’un de mes préférés, car j’ai pu l’imaginer de A à Z et créer tout un univers ainsi qu’un concept de bijouterie.'
 missions:
   - 'Création de l’identité de marque : nom, positionnement et valeurs'
   - Définition de la cible et élaboration de personas marketing
