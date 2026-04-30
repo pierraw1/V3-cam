@@ -40,5 +40,6 @@ tools:
   - name: LightRoom
     logoUrl: /images/icone/L_Fichier%207lightroom.svg
 thumbnail: /images/bannière/IMG_7720.jpg
+banner: /images/img-projet.jpg
 ---
 
