@@ -39,7 +39,7 @@ tools:
     logoUrl: /images/icone/L_Fichier%2012Photoshop.svg
   - name: LightRoom
     logoUrl: /images/icone/L_Fichier%207lightroom.svg
-thumbnail: /images/bannière/IMG_7720.jpg
-banner: /images/img-projet.jpg
+thumbnail: /images/IMG_7518.jpg
+banner: /images/banni%C3%A8re/IMG_7720.jpg
 ---
 
