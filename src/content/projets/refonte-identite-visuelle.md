@@ -2,11 +2,11 @@
 title: Documentaire Social
 category: Audiovisuel
 date: septembre 2024
-anecdote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 context: |-
   Ce projet a été réalisé dans le cadre d’un cours d’audiovisuel, avec pour objectif de produire un documentaire autour des cancers pédiatriques.
   L’enjeu était de traiter un sujet sensible et complexe en proposant un contenu à la fois informatif, accessible et humain, à travers des témoignages et des interventions pertinentes.
   Ce projet s’inscrit dans une démarche de production audiovisuelle complète, de la préparation éditoriale jusqu’à la post-production.
+anecdote: 'Aussi difficile à aborder qu’il soit, ce projet nous a permis de faire de magnifiques rencontres, pleines de bienveillance et de sagesse. Il nous a fait passer des larmes au rire, en nous rappelant qu’au-delà de la maladie, ce sont les souvenirs, beaux et drôles, qui perdurent.'
 missions:
   - Définition de l’angle du documentaire et rédaction des questions d’interview
   - Recherche et prise de contact avec les intervenants
