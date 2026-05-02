@@ -10,12 +10,12 @@ const titleParts = data.heroTitle.split('\n');
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <!-- Colonne de Gauche : Textes (Positionnée en bas sur mobile, à gauche sur PC) -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left justify-center order-2 md:order-1 mt-0 md:mt-0">
-            <h1 class="text-[5rem] md:text-[7rem] leading-[1] font-hero text-accent mb-6 whitespace-pre-line">
+            <h1 class="hero-title text-[5rem] md:text-[7rem] leading-[1] font-hero text-accent mb-6 whitespace-pre-line">
                 {titleParts.map((line: string, i: number) => (
                     <>{line}{i < titleParts.length - 1 && <br />}</>
                 ))}
             </h1>
-            <p class="text-xl md:text-2xl font-body text-gray-900 max-w-sm leading-relaxed">
+            <p class="hero-desc text-xl md:text-2xl font-body text-gray-900 max-w-sm leading-relaxed">
                 {data.heroDescription}
             </p>
         </div>
@@ -24,26 +24,26 @@ const titleParts = data.heroTitle.split('\n');
         <div class="flex items-center justify-center order-1 md:order-2 w-full">
             <!-- Wrapper relatif ajusté précisément sur la photo -->
             <div class="relative w-[75%] max-w-[320px] aspect-[4/5]">
-                
+
                 <!-- Ellipse (en arrière-plan, relevée pour dépasser en haut à droite) -->
-                <img 
-                    src="/images/ellipse.png" 
-                    alt="" 
-                    class="absolute z-0 top-[-10%] md:top-[-10%] right-[-5%] md:right-[-15%] w-[80%] md:w-[85%] object-contain" 
+                <img
+                    src="/images/ellipse.png"
+                    alt=""
+                    class="hero-ellipse absolute z-0 top-[-10%] md:top-[-10%] right-[-5%] md:right-[-15%] w-[80%] md:w-[85%] object-contain"
                 />
-                
+
                 <!-- Image photo archée (Photo principale) -->
-                <img 
-                    src={data.heroImage} 
-                    alt="Portrait" 
-                    class="relative z-10 w-full h-full object-cover rounded-t-full rounded-b-2xl shadow-lg border-4 border-white/60"
+                <img
+                    src={data.heroImage}
+                    alt="Portrait"
+                    class="hero-photo relative z-10 w-full h-full object-cover rounded-t-full rounded-b-2xl shadow-lg border-4 border-white/60"
                 />
-                
+
                 <!-- Fleurs (en avant-plan, décalée plus à l'extérieur) -->
-                <img 
-                    src="/images/fleurs.png" 
-                    alt="" 
-                    class="hidden xl:block absolute z-20 bottom-[0%] left-[-80%] w-[80%] object-contain scale-110 origin-bottom-right" 
+                <img
+                    src="/images/fleurs.png"
+                    alt=""
+                    class="hero-flowers hidden xl:block absolute z-20 bottom-[0%] left-[-80%] w-[80%] object-contain scale-110 origin-bottom-right"
                 />
             </div>
         </div>

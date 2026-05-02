@@ -67,3 +67,53 @@
     @apply font-heading;
   }
 }
+
+/* ── Animations ──────────────────────────────────────────── */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes photoIn {
+  from { opacity: 0; transform: scale(0.94) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Hero : joue dès le chargement de la page */
+.hero-title   { animation: fadeUp  0.85s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-desc    { animation: fadeUp  0.85s cubic-bezier(0.4, 0, 0.2, 1) 0.2s  both; }
+.hero-photo   { animation: photoIn 1s    cubic-bezier(0.4, 0, 0.2, 1) 0.1s  both; }
+.hero-ellipse { animation: fadeUp  1s    cubic-bezier(0.4, 0, 0.2, 1) 0.35s both; }
+.hero-flowers { animation: fadeUp  1s    cubic-bezier(0.4, 0, 0.2, 1) 0.5s  both; }
+
+/* Scroll : déclenché par IntersectionObserver */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-delay="1"] { transition-delay: 0.12s; }
+[data-delay="2"] { transition-delay: 0.24s; }
+[data-delay="3"] { transition-delay: 0.36s; }
+[data-delay="4"] { transition-delay: 0.48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-desc, .hero-photo, .hero-ellipse, .hero-flowers {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
