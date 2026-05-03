@@ -39,7 +39,6 @@ links:
 tools:
   - name: Premiere pro
     logoUrl: /images/icone/L_Fichier%209premiere.svg
-thumbnail: /images/bannière/cancer-pediatrique-scaled.jpg
+thumbnail: /images/banni%C3%A8re/cancer-pediatrique-scaled.webp
 ---
-
 
