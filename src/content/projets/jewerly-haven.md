@@ -40,7 +40,7 @@ tools:
     logoUrl: /images/icone/L_Fichier%204Figma.svg
   - name: Illustrator
     logoUrl: /images/icone/L_Fichier%2010illustrator.svg
-thumbnail: /images/banni%C3%A8re/banni%C3%A8re_JH.png
+thumbnail: /images/Dossier_rendu_Jewerly_Haven.webp
 banner: /images/banni%C3%A8re/Jewerly%20haven.webp
 ---
 
