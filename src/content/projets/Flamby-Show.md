@@ -36,6 +36,6 @@ tools:
     logoUrl: /images/icone/L_Fichier%2012Photoshop.svg
   - name: LightRoom
     logoUrl: /images/icone/L_Fichier%207lightroom.svg
-thumbnail: /images/bannière/banner-flambyshow.webp
+thumbnail: /images/banni%C3%A8re/banner-flambyshow%20(1).webp
 ---
 
