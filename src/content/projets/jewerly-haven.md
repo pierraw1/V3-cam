@@ -41,6 +41,7 @@ tools:
   - name: Illustrator
     logoUrl: /images/icone/L_Fichier%2010illustrator.svg
 thumbnail: /images/Dossier_rendu_Jewerly_Haven.webp
+thumbnailAlt: Charte graphique de Jewerly Haven
 banner: /images/banni%C3%A8re/Jewerly%20haven.webp
 ---
 
