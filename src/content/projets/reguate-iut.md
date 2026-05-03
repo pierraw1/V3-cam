@@ -35,6 +35,7 @@ tools:
   - name: Canva
     logoUrl: /images/L_Fichier 3Canva.svg
   - name: Figma
+    logoUrl: /images/icone/L_Fichier%204Figma.svg
 thumbnail: /images/Regate (1).jpg
 banner: /images/banni%C3%A8re/Regate.webp
 ---
