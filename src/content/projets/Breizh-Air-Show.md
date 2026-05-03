@@ -41,6 +41,6 @@ tools:
     logoUrl: /images/icone/L_Fichier%207lightroom.svg
 thumbnail: /images/IMG_7518.jpg
 thumbnailAlt: 'Photographie que j’ai faite, où l’on voit un hélicoptère et une foule de personnes devant.'
-banner: /images/banni%C3%A8re/IMG_7720.jpg
+banner: /images/banni%C3%A8re/IMG_7720.webp
 ---
 
