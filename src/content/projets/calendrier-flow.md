@@ -38,6 +38,6 @@ tools:
     logoUrl: /images/icone/L_Fichier%204Figma.svg
   - name: Canva
     logoUrl: /images/icone/L_Fichier%203Canva.svg
-thumbnail: /images/bannière/FLUX-2026-04-26-14-37-44.jpeg
+thumbnail: /images/banni%C3%A8re/FLUX-2026-04-26-14-37-44.webp
 ---
 
