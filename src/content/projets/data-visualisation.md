@@ -43,7 +43,6 @@ tools:
     logoUrl: /images/icone/L_Fichier%2016HTML.svg
   - name: CSS
     logoUrl: /images/icone/L_Fichier%2017CSS.svg
-thumbnail: /images/bannière/Affiche_CCampan_QMoenner_CThomas.jpg
+thumbnail: /images/banni%C3%A8re/Affiche_CCampan_QMoenner_CThomas.webp
 ---
-
 
